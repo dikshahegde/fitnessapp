@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Workout List</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Your Workout Plan</h1>
+
+        <div id="workoutPlan">
+            <h2>Exercises</h2>
+            <ul id="exercisesList">
+                <!-- Dynamically filled by servlet -->
+            </ul>
+
+            <h2>Sets and Reps</h2>
+            <p id="setsAndReps"></p>
+        </div>
+
+        <!-- Form to navigate to FoodListServlet -->
+        <form action="foodList" method="get">
+            <button type="submit" class="btn">See Food List</button>
+        </form>
+    </div>
+
+    <script>
+        // Function to load workout plan from server
+        function loadWorkoutPlan() {
+            fetch('generateWorkout') // Adjust this URL if necessary
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error('Network response was not ok');
+                    }
+                    return response.json();
+                })
+                .then(data => {
+                    const exercisesList = document.getElementById('exercisesList');
+                    const setsAndReps = document.getElementById('setsAndReps');
+
+                    // Clear existing content
+                    exercisesList.innerHTML = '';
+
+                    // Populate the exercises list
+                    data.exercises.forEach(exercise => {
+                        const listItem = document.createElement('li');
+                        listItem.textContent = exercise;
+                        exercisesList.appendChild(listItem);
+                    });
+
+                    // Display sets and reps
+                    setsAndReps.textContent = `Sets: ${data.sets}, Reps: ${data.reps}`;
+                })
+                .catch(error => console.error('Error fetching workout plan:', error));
+        }
+
+        // Load the workout plan when the page loads
+        window.onload = loadWorkoutPlan;
+    </script>
+</body>
+</html>
