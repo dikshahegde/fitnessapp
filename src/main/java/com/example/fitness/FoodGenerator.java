@@ -50,9 +50,7 @@ public class FoodGenerator {
             
         } else if (userProfile.workoutPreference.equals("strength") && userProfile.foodRestriction.equals("non_vegetarian")) {
         	food.add("Chicken Breast");
-        	food.add("Turkey");
-        	food.add("Salmon");
-        	food.add("Tuna");
+        	
         	food.add("Eggs");
         	food.add("Shrimp");
         	food.add("Lean Beef");
@@ -196,7 +194,7 @@ public class FoodGenerator {
         }
         else if (userProfile.workoutPreference.equals("cardio") && userProfile.foodRestriction.equals("pescatarian")) {
         	food.add("Salmon");
-        	food.add("Tuna");
+        	
         	food.add("Shrimp");
         	food.add("Crab");
         	food.add("Lobster");      	
@@ -248,10 +246,7 @@ public class FoodGenerator {
 
         }
         else if (userProfile.workoutPreference.equals("flexibility") && userProfile.foodRestriction.equals("non_vegetarian")) {
-        	food.add("Salmon");
-        	food.add("Tuna");
         	food.add("Chicken Breast");
-        	food.add("Turkey");
         	food.add("Eggs");
         	food.add("Greek Yogurt");
         	food.add("Cottage Cheese");
@@ -306,9 +301,7 @@ public class FoodGenerator {
 
         }
         else if (userProfile.workoutPreference.equals("flexibility") && userProfile.foodRestriction.equals("pescatarian")) {
-        	food.add("Salmon");
-        	food.add("Tuna");
-        	food.add("Shrimp");
+    
         	food.add("Sardines");
         	food.add("Spinach");
         	food.add("Kale");
@@ -368,12 +361,9 @@ public class FoodGenerator {
         }
         else if (userProfile.workoutPreference.equals("balance") && userProfile.foodRestriction.equals("non_vegetarian")) {
         	food.add("Chicken Breast");
-        	food.add("Turkey");
-        	food.add("Salmon");
-        	food.add("Tuna");
+        	
         	food.add("Eggs");
-        	food.add("Shrimp");
-        	food.add("Lean Beef");     	
+        	food.add("Shrimp");     	
         	food.add("Crab");
         	food.add("Lobster");
         	food.add("Greek Yogurt");
@@ -427,11 +417,7 @@ public class FoodGenerator {
 
         }
         else if (userProfile.workoutPreference.equals("balance") && userProfile.foodRestriction.equals("pescatarian")) {
-        	food.add("Salmon");
-        	food.add("Tuna");
-        	food.add("Shrimp");
-        	food.add("Crab");
-        	food.add("Lobster");
+        
         	food.add("Spinach");
         	food.add("Kale");
         	food.add("Swiss Chard");
