@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food Restrictions</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Set Your Food Preferences</h1>
+        <form action="generateWorkout" method="post">
+            <!-- Food Restrictions -->
+            <label for="foodRestriction">Food Restrictions:</label>
+            <select id="foodRestriction" name="foodRestriction" required>
+                <option value="" disabled selected hidden>Enter your food restrictions...</option>
+                <option value="vegetarian">Vegetarian</option>
+                <option value="non_vegetarian">Non-Vegetarian</option>
+                <option value="vegan">Vegan</option>
+                <option value="pescatarian">Pescatarian</option>
+            </select>
+
+            <!-- Allergies -->
+            <label for="allergy">Allergies:</label>
+            <select id="allergy" name="allergy" required>
+                <option value="" disabled selected hidden>Enter your allergies...</option>
+                <option value="none">None</option>
+                <option value="gluten">Gluten</option>
+                <option value="nuts">Nuts</option>
+                <option value="lactose">Lactose</option>
+            </select>
+
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+</body>
+</html>

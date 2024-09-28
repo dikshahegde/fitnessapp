@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fitness Goals</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1 style="color: #ffffff;">Set Your Fitness Goals</h1>
+         <h1 style="color: #ffffff;">&</h1>
+         <h1 style="color: #ffffff;">Food Restrictions</h1>
+        <form action="generateWorkout" method="POST" id="fitnessForm">
+            <!-- Fitness Goal -->
+            <label for="fitnessGoal">Fitness Goal:</label>
+            <select id="fitnessGoal" name="fitnessGoal" required>
+                <option value="" disabled selected hidden>Enter your fitness goal here...</option>
+                <option value="weight_loss">Weight Loss</option>
+                <option value="muscle_gain">Muscle Gain</option>
+                <option value="endurance">Endurance</option>
+                <option value="flexibility">Flexibility</option>
+            </select>
+
+            <!-- Fitness Level -->
+            <label for="fitnessLevel">Fitness Level:</label>
+            <select id="fitnessLevel" name="fitnessLevel" required>
+                <option value="" disabled selected hidden>Enter your fitness level here...</option>
+                <option value="beginner">Beginner</option>
+                <option value="intermediate">Intermediate</option>
+                <option value="advanced">Advanced</option>
+            </select>
+
+            <!-- Workout Preference -->
+            <label for="workoutPreference">Workout Preference:</label>
+            <select id="workoutPreference" name="workoutPreference" required>
+                <option value="" disabled selected hidden>Enter your workout preference here...</option>
+                <option value="cardio">Cardio</option>
+                <option value="strength">Strength</option>
+                <option value="flexibility">Flexibility</option>
+                <option value="balance">Balance</option>
+            </select>
+
+            <!-- Restrictions/Injuries -->
+            <label for="restrictions">Restrictions/Injuries:</label>
+            <select id="restrictions" name="restrictions">
+                <option value="" disabled selected hidden>Enter your restrictions/injuries here...</option>
+                <option value="none">None</option>
+                <option value="back_pain">Back Pain</option>
+                <option value="knee_pain">Knee Pain</option>
+                <option value="shoulder_injury">Shoulder Injury</option>
+            </select>
+            
+            <label for="foodRestriction">Food Restrictions:</label>
+            <select id="foodRestriction" name="foodRestriction" required>
+                <option value="" disabled selected hidden>Enter your food restrictions...</option>
+                <option value="vegetarian">Vegetarian</option>
+                <option value="non_vegetarian">Non-Vegetarian</option>
+                <option value="vegan">Vegan</option>
+                <option value="pescatarian">Pescatarian</option>
+            </select>
+            
+            <label for="allergy">Allergies:</label>
+            <select id="allergy" name="allergy" required>
+                <option value="" disabled selected hidden>Enter your allergies...</option>
+                <option value="none">None</option>
+                <option value="gluten">Gluten</option>
+                <option value="nuts">Nuts</option>
+                <option value="lactose">Lactose</option>
+            </select>
+
+            <!-- Submit Button -->
+            <button type="submit">Next</button>
+        </form>
+    </div>
+
+    <script>
+        // JavaScript to change the color of the selected option
+        document.querySelectorAll('select').forEach(select => {
+            select.addEventListener('change', function () {
+                this.style.color = this.value === '' ? '#b0c4de' : '#ffffff';
+            });
+        });
+    </script>
+</body>
+</html>

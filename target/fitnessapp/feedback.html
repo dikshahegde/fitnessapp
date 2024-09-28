@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>We Value Your Feedback</h1>
+        <form id="feedbackForm">
+            <label for="feedback">Your Feedback:</label>
+            <textarea id="feedback" name="feedback" rows="5" required></textarea>
+
+            <button type="button" onclick="goToNextPage()">Submit</button>
+        </form>
+    </div>
+
+    <script>
+        function goToNextPage() {
+            // Here you can handle the feedback submission (e.g., send it to a server)
+            // After submission, redirect to the thank you page
+            window.location.href = "thank-you.html";
+        }
+    </script>
+</body>
+</html>

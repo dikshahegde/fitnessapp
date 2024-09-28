@@ -1,0 +1,7 @@
+com\example\fitness\WorkoutGenerator.class
+com\example\fitness\WorkoutServlet.class
+com\example\fitness\FoodGenerator.class
+com\example\fitness\UserProfile.class
+com\example\fitness\FoodListServlet.class
+com\example\fitness\FoodPlan.class
+com\example\fitness\WorkoutPlan.class
