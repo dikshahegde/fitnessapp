@@ -1,4 +1,4 @@
-FROM tomcat:8.5-jdk8
+FROM tomcat:9.0-jdk8
 
 # Set the working directory inside the container
 WORKDIR /usr/local/tomcat/webapps/
